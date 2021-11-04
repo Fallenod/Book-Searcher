@@ -1,0 +1,34 @@
+.header {
+    width: 100%;
+    height: 58px;
+    display: flex;
+    background-color: #FF5E57;
+    justify-content: space-around;
+    align-items: center;
+}
+.book_search {
+    width: 35%;
+    height: 85%;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+form {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.book_search_button {
+    border: none;
+    width: 10%;
+    height: 85%;
+    border-radius: 20px;
+    margin-left: 10px;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    
+}
