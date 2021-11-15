@@ -1,5 +1,6 @@
 import style from './SearchResult.module.css';
 import noImage from './noImage.svg'
+import Loader from '../../components/Loader/Loader';
 
 function SearchResult({items}) {
     
@@ -8,16 +9,17 @@ function SearchResult({items}) {
             {
                 items.items ? items.items.map(({volumeInfo}) => (
                     <div className={style.main__item}>
-                        <p className={style.text_authors}>{volumeInfo.authors}</p>
-                        <img  src={
-                            volumeInfo.imageLinks === undefined
-                                ? `${noImage}`
-                                : `${volumeInfo.imageLinks.thumbnail}`
-                        } alt="" />
+                        <div className={style.imageWrapper}>
+                            <img  src={
+                                volumeInfo.imageLinks === undefined
+                                    ? `${noImage}`
+                                    : `${volumeInfo.imageLinks.thumbnail}`
+                            } alt="" />
+                        </div>
                         <p className={style.text_title}>{volumeInfo.title}</p>
-                        
+                        <p className={style.text_authors}>{volumeInfo.authors[0]}</p>
                     </div>
-                )) : 'loading'
+                )) : <Loader/>
             }
         </div>
      );
