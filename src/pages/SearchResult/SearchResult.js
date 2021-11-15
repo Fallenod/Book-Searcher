@@ -1,7 +1,7 @@
-import style from './Main.module.css';
+import style from './SearchResult.module.css';
 import noImage from './noImage.svg'
 
-function Main({items}) {
+function SearchResult({items}) {
     
     return ( 
         <div className={style.main}>
@@ -23,4 +23,4 @@ function Main({items}) {
      );
 }
 
-export default Main;
+export default SearchResult;

@@ -11,9 +11,10 @@ function Header({search}) {
      console.log(searchField)
     return ( 
         <header className={style.header}>
+            
             <form>
                 <input className={style.book_search} onChange = {e => setSearchField(e.target.value)} type="search" placeholder="Введите название книги" id="book-search" name="q" />
-                <input className={style.book_search_button} value="Искать" type="submit" onClick = {handleChange}/>
+                <button className={style.book_search_button} type="submit" onClick = {handleChange}><ion-icon name="search-outline"></ion-icon></button>
             </form>
         </header>
      );

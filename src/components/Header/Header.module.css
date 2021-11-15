@@ -1,4 +1,6 @@
 .header {
+    position: sticky;
+    top: 0;
     width: 100%;
     height: 58px;
     display: flex;
@@ -23,9 +25,9 @@ form {
 }
 .book_search_button {
     border: none;
-    width: 10%;
-    height: 85%;
-    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 200px;
     margin-left: 10px;
     outline: none;
     background-color: white;

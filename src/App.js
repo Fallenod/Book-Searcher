@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
-import Header from './Header';
-import Main from './Main';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import SearchResult from './pages/SearchResult/SearchResult';
 import './App.css';
-import LoadMoreButton from './LoadMoreButton';
-import { getData } from "./getData";
+import LoadMoreButton from './components/LoadMoreButton';
+import { getData } from "./api/getData";
 
 
 function App() {
@@ -28,8 +29,9 @@ function App() {
   return (
     <div className="App">
       <Header search={searchValue}/>
-      <Main items={items}/>
-      <LoadMoreButton loadMore={loadMore} items={items} />
+      <SearchResult items={items}/>
+      {/* <LoadMoreButton loadMore={loadMore} items={items} /> */}
+      <Footer/>
     </div>
   );
 }
