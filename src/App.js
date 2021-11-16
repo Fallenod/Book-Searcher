@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Main from './pages/Main/Main';
 import SearchResult from './pages/SearchResult/SearchResult';
 import './App.css';
 import LoadMoreButton from './components/LoadMoreButton';
@@ -29,7 +30,8 @@ function App() {
   return (
     <div className="App">
       <Header search={searchValue}/>
-      <SearchResult items={items}/>
+      {/* <SearchResult items={items}/> */}
+      <Main/>
       {/* <LoadMoreButton loadMore={loadMore} items={items} /> */}
       <Footer/>
     </div>

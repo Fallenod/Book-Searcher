@@ -14,10 +14,10 @@ function SearchResult({items}) {
                                 volumeInfo.imageLinks === undefined
                                     ? `${noImage}`
                                     : `${volumeInfo.imageLinks.thumbnail}`
-                            } alt="" />
+                            } alt="" loading="lazy" />
                         </div>
                         <p className={style.text_title}>{volumeInfo.title}</p>
-                        <p className={style.text_authors}>{volumeInfo.authors[0]}</p>
+                        <p className={style.text_authors}>{volumeInfo.authors}</p>
                     </div>
                 )) : <Loader/>
             }
