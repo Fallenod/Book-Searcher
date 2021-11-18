@@ -16,11 +16,13 @@ function Main() {
             if(result.status >= 400) {
                 throw Error('Something wrong')
             }
+            else {
+                setItems(result);
+            }
         }
-        setItems(data);
-        
+        data();
     }, [])
-    console.log(items)
+    
     return ( 
         <div className={style.main}>
             <div className={style.bannerContainer}>
@@ -35,9 +37,14 @@ function Main() {
                     <img src={carouselBannerImg2} href='#' alt="" />
                 </div>
             </Carousel>
-            <Carousel>
-
-            </Carousel>
+            {
+                 items.items ? items.items.map(({volumeInfo}) => (
+                    <div>
+                        <p>{volumeInfo.title}</p>
+                        <p>{volumeInfo.authors}</p>
+                    </div>
+                )) : 'loading'
+            }
 
         </div>
      );
