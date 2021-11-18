@@ -1,32 +1,23 @@
 .main {
     width: 100%;
 }
-.bannerContainer {
+
+.bookCompilation {
+}
+
+
+.bookCompilationTitle {
+    font-size: 2.5rem;
+    font-family: 'Libre Baskerville', serif;
+    text-align: left;
+    margin: 1rem;
+}
+.bookCompilationTitle:hover {
+    color: rgb(59, 65, 71);
+}
+
+.bookCompilationWrapper {
     display: flex;
-    justify-content: center;
-    position: relative;
-    text-align: center;
-    padding-top: 4rem;
-    margin-bottom: 2rem;
-    color: white;
-    background-color: #3586ff;
-    
-}
-.mainBanner {
-    background: url(/src/pages/Main/mainBannerImage.webp) no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 0;
-    padding-top: 33.846%;
-    
-}
-.header {
-    position: absolute;
-    font-size: 3rem;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.carouselBanner {
-    cursor: pointer;
+    flex-direction: row;
+    margin: 1rem;
 }

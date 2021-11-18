@@ -1,0 +1,47 @@
+.mainItem {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,.1);
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 4%);
+    transition: box-shadow .3s;
+}
+
+.mainItem:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.textTitle {
+    align-self: flex-start;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.textAuthors {
+    align-self: flex-start;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.imageWrapper {
+    display: flex;
+    width: 120px;
+    min-height: 190px;
+    background-color: #EEEEEE;
+    margin-bottom: .7rem;
+    padding: 3px;
+    transition: transform .2s;
+}
+
+.imageWrapper:hover {
+    transform: scale(1.05);
+}
+
+.imageWrapper > img {
+    max-width: 100%;
+    height: auto;
+    
+}

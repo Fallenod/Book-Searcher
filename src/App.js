@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <Header search={searchValue}/>
-      {/* <SearchResult items={items}/> */}
+      {/* <SearchResult items={items.items}/> */}
       <Main/>
       {/* <LoadMoreButton loadMore={loadMore} items={items} /> */}
       <Footer/>
