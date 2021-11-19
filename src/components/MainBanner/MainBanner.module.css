@@ -1,16 +1,23 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    background-color: #3586ff;
+}
 .bannerContainer {
     display: flex;
     justify-content: center;
     position: relative;
     text-align: center;
+    width: 79vw;
     padding-top: 4rem;
-    margin-bottom: 2rem;
     color: white;
-    background-color: #3586ff;
     
 }
 .mainBanner {
-    background: url(/src/pages/Main/mainBannerImage.webp) no-repeat;
+    background: url(/src/components/MainBanner/mainBannerImage.webp) no-repeat;
     background-size: contain;
     width: 100%;
     height: 0;
@@ -19,7 +26,8 @@
 }
 .header {
     position: absolute;
-    font-size: 3rem;
+    font-size: 2.2vw;
+    font-family: 'Libre Baskerville', serif;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);

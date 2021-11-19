@@ -1,6 +1,9 @@
 import { Carousel } from 'react-responsive-carousel';
-import carouselBannerImg1 from './carouselBanner1.webp';
-import carouselBannerImg2 from './carouselBanner2.jpg';
+import carouselBannerImg1 from './carouselBannerImg1.webp';
+import carouselBannerImg2 from './carouselBannerImg2.jpg';
+import carouselBannerImg3 from './carouselBannerImg3.jpeg';
+import carouselBannerImg4 from './carouselBannerImg4.jpeg';
+import carouselBannerImg5 from './carouselBannerImg5.jpeg';
 import style from './SecondBanner.module.css';
 
 function SecondBanner() {
@@ -11,6 +14,15 @@ function SecondBanner() {
                 </div>
                 <div className={style.carouselBanner}>
                     <img src={carouselBannerImg2} href='#' alt="" />
+                </div>
+                <div className={style.carouselBanner}>
+                    <img src={carouselBannerImg3} href='#' alt="" />
+                </div>
+                <div className={style.carouselBanner}>
+                    <img src={carouselBannerImg4} href='#' alt="" />
+                </div>
+                <div className={style.carouselBanner}>
+                    <img src={carouselBannerImg5} href='#' alt="" />
                 </div>
         </Carousel>
      );

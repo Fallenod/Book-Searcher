@@ -20,6 +20,11 @@
     font-size: 1rem;
     font-weight: 600;
 }
+.textTitle:hover,
+.textAuthors:hover {
+    transition: .7s;
+    color: #7995eb;
+}
 .textAuthors {
     align-self: flex-start;
     font-size: 1rem;
