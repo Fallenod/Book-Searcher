@@ -25,7 +25,7 @@ function Main() {
                 data: 'not update'
                }];
     const data = async (term) => { 
-        const url =`https://www.googleapis.com/books/v1/volumes?q=${term}&printType=books&maxResults=5&startIndex=1`
+        const url =`https://www.googleapis.com/books/v1/volumes?q=${term}&printType=books&maxResults=4&startIndex=1`
         const res = await fetch(url);
         const result = await res.json()
         if(result.status >= 400) {

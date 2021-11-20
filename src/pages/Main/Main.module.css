@@ -19,6 +19,8 @@
 
 .bookCompilationWrapper {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
     flex-direction: row;
     margin: 1rem 0;
     gap: .7rem;

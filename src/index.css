@@ -16,7 +16,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F6F6F6;
+  background-color: #F5EBDC;
 }
 p {
   margin: 0;
@@ -30,4 +30,27 @@ a {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+[data-tooltip] {
+  position: relative;
+  overflow: visible;
+}
+[data-tooltip]::after {
+  content: attr(data-tooltip); /* Выводим текст */
+  position: absolute; /* Абсолютное позиционирование */
+  width: 250px; /* Ширина подсказки */
+  left: 60px; top: 0px; /* Положение подсказки */
+  background: #252525c5; /* Синий цвет фона */
+  color: rgb(233, 233, 233); /* Цвет текста */
+  padding: 0.5em; /* Поля вокруг текста */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
+  pointer-events: none; /* Подсказка */
+  opacity: 0; /* Подсказка невидима */
+  transition: .4s; /* Время появления подсказки */
+  border-radius: .4rem;
+  overflow: visible;
+}
+[data-tooltip]:hover::after {
+  opacity: 1; /* Показываем подсказку */
+  top: 2em; /* Положение подсказки */
 }

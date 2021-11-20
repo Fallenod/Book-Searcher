@@ -5,6 +5,7 @@ import noImage from './noImage.svg'
 import { Fragment } from 'react';
 
 function BookCard(items) {
+    const saleStatus = "FOR_SALE";
     return ( 
         <Fragment>
         {
@@ -18,14 +19,23 @@ function BookCard(items) {
                                     : `${volumeInfo.imageLinks.thumbnail}`
                             } alt="" loading="lazy" />
                         </div>
-                        <p className={style.textTitle}>{volumeInfo.title}</p>
+                        <div data-tooltip={volumeInfo.title} className={style.textContainer}>
+                            <p className={style.textTitle}>{volumeInfo.title}</p>
+                            <p className={style.textAuthors}>{volumeInfo.authors.join()}</p>
+                        </div>
+                        <div className={style.priceContainer}>
+                            <span className={(saleInfo.saleability === saleStatus) && (saleInfo.listPrice.amount > saleInfo.retailPrice.amount) ? style.oldPrice : style.actualPrice}>
+                                {saleInfo.saleability === saleStatus
+                                    ? ` ${~~saleInfo.listPrice.amount} ₽ ` : 'Out of stock'
+                                }
+                            </span>
+                            <span className={style.listPrice}>
+                                {(saleInfo.saleability === saleStatus) && (saleInfo.listPrice.amount > saleInfo.retailPrice.amount)
+                                    ? `${~~saleInfo.retailPrice.amount} ₽ ` : ''
+                                }
+                            </span>
+                    </div>
                     </Link>
-                    <p className={style.textAuthors}>{volumeInfo.authors}</p>
-                    <p className={style.textAuthors}>{
-                        saleInfo.saleability === 'NOT_FOR_SALE'
-                            ? `not for sale` : `${saleInfo.listPrice.amount}`
-                        }
-                    </p>
                 </div>
             )) : <Loader/>
         }
