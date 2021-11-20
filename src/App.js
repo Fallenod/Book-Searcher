@@ -6,6 +6,7 @@ import './App.css';
 import LoadMoreButton from './components/LoadMoreButton';
 import { getData } from "./api/getData";
 import Layout from "./components/Layout/Layout";
+import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
         <Route path="/" element={<Layout searchValue={searchValue} />}>
           <Route index path="/" element={<Main/>}/>
           <Route path="/search" element={<SearchResult items={items.items}/>}/>
-          {/* <Route path="*" element={}/> */}
+          <Route path="*" element={PageNotFound}/>
         </Route>  
         </Routes>
       </Router>
