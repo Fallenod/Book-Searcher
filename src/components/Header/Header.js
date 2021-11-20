@@ -1,4 +1,5 @@
-import {useState } from "react"
+import {useState } from "react";
+import {Link} from 'react-router-dom';
 import style from './Header.module.css';
 import logo from './logo.png';
 
@@ -12,9 +13,11 @@ function Header({search}) {
     return ( 
         <header className={style.header}>
             <div className={style.headerItems}>
-                <div className={style.logoWrapper}>
-                    <img className={style.logoWrapperImg} src={logo} alt="logo" />
-                </div>
+                <Link to="/">
+                    <div className={style.logoWrapper}>
+                        <img className={style.logoWrapperImg} src={logo} alt="logo" />
+                    </div>
+                </Link>
                 <form>
                     <input className={style.book_search} onChange = {e => setSearchField(e.target.value)} type="search" placeholder="Search" id="book-search" name="q" />
                     <button className={style.book_search_button} type="submit" onClick = {handleChange}><ion-icon name="search-outline"></ion-icon></button>

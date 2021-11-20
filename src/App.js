@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import Main from './pages/Main/Main';
 import SearchResult from './pages/SearchResult/SearchResult';
 import './App.css';
 import LoadMoreButton from './components/LoadMoreButton';
 import { getData } from "./api/getData";
+import Layout from "./components/Layout/Layout";
 
 
 function App() {
@@ -18,9 +18,6 @@ function App() {
     setItems(items ? {...items, ...data} : data);
         setIndex(index + 1)
   }
-  const loadMore = () => {
-    fetchData()
-  }
   useEffect(() => {
       fetchData()
   }, [value])
@@ -29,11 +26,16 @@ function App() {
   }
   return (
     <div className="App">
-      <Header search={searchValue}/>
-      {/* <SearchResult items={items.items}/> */}
-      <Main/>
-      {/* <LoadMoreButton loadMore={loadMore} items={items} /> */}
-      <Footer/>
+      
+      <Router>
+        <Routes>
+        <Route path="/" element={<Layout searchValue={searchValue} />}>
+          <Route index path="/" element={<Main/>}/>
+          <Route path="/search" element={<SearchResult items={items.items}/>}/>
+          {/* <Route path="*" element={}/> */}
+        </Route>  
+        </Routes>
+      </Router>
     </div>
   );
 }
