@@ -37,14 +37,16 @@ form {
 }
 .book_search_button {
     border: none;
-    width: 33px;
+    width: 36px;
     height: 33px;
     margin-right: .55rem;
     border-radius: 200px;
     outline: none;
-    background-color: rgb(255, 240, 36);
     cursor: pointer;
-    
+    background-color: transparent;
+}
+.book_search_button:hover {
+    background-color: #f7f7f7;
 }
 .logoWrapper {
     cursor: pointer;
