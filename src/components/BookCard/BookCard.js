@@ -18,6 +18,8 @@ function BookCard(items) {
                                     ? `${noImage}`
                                     : `${volumeInfo.imageLinks.thumbnail}`
                             } alt="" loading="lazy" />
+                            {((saleInfo.saleability === saleStatus) && (saleInfo.listPrice.amount > saleInfo.retailPrice.amount)) && <div className={style.discount}><span>-{~~((saleInfo.listPrice.amount - saleInfo.retailPrice.amount) / saleInfo.listPrice.amount * 100)}%</span></div>}
+                            
                         </div>
                         <div data-tooltip={volumeInfo.title} className={style.textContainer}>
                             <p className={style.textTitle}>{volumeInfo.title}</p>
