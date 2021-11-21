@@ -1,0 +1,26 @@
+.main {
+    width: 60vw;
+}
+h1 {
+    text-align: center;
+}
+img {
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
+.textContainer {
+    
+}
+.text {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+
+@media (max-width: 850px) {
+    .main {
+        width: 90vw;
+       
+    }
+}

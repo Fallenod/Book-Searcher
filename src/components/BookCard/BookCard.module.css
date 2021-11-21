@@ -54,13 +54,13 @@
     text-decoration: none;
 }
 .oldPrice {
-    text-decoration: line-through;
-    color: #747474;
+    text-decoration: line-through #f10000;
+    color: #f10000;
     font-size: 1rem;
 }
 .listPrice {
     margin-left: .3rem;
-    color: #f10000;
+    color: #00c070;
 }
 .discount {
     position: absolute;
@@ -68,13 +68,15 @@
     right: 10px;
     width: 50px;
     height: 50px;
+    font-size: 1.1rem;
     line-height: 50px;
     text-align: center;
     color: #ffffff;
     border-radius: 50%;
-    background-color: #f10000d3;
+    background-color: #00c070d5;
     
 }
 .discount:hover {
-    background-color: #f10000;
+    background-color: #00c070f5;
+    transition: background-color 0.7s;
 }
