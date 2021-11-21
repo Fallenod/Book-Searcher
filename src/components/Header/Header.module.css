@@ -5,11 +5,14 @@
     width: 100%;
     height: 68px;
     display: flex;
-    background-color: #925742;
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10000;
+    -webkit-box-shadow: 0px 6px 19px 6px rgba(34, 60, 80, 0.29);
+    -moz-box-shadow: 0px 6px 19px 6px rgba(34, 60, 80, 0.29);
+    box-shadow: 0px 3px 7px 3px rgba(34, 60, 80, 0.144);
 }
 .headerItems {
     display: flex;
@@ -33,7 +36,7 @@ form {
     align-items: center;
     width: 20vw;
     border-radius: 5rem;
-    background-color: #ffffff;
+    background-color: #f3f3f3;
 }
 .book_search_button {
     border: none;
@@ -49,10 +52,15 @@ form {
     background-color: #f7f7f7;
 }
 .logoWrapper {
-    margin-top: 2rem;
+    display: flex;
     cursor: pointer;
 }
 
 .logoWrapperImg {
     width: 40px;
+    
+}
+.logoText {
+    font-size: 2rem;
+    color: #f3f3f3;
 }

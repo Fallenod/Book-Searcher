@@ -4,8 +4,8 @@ import aboutImg from './aboutImg.jpg';
 function AboutPage() {
     return ( 
         <div className={style.main}>
-            <h1>Welcome to our Book store!</h1>
-            <img src={aboutImg} alt="" />
+            <h1 className={style.title}>Welcome to our Book store!</h1>
+            <img className={style.aboutImg} src={aboutImg} alt="" />
             <div className={style.textContainer}>
                 <p className={style.text}>
                 Bookshop is an online bookstore with a mission to financially support local, independent bookstores.

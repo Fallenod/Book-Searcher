@@ -1,7 +1,7 @@
-h1 {
+.title {
     margin: 2rem;
 }
-p {
+.text {
     margin-bottom: 2rem;
 }
 .main {

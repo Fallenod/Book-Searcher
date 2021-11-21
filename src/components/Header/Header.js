@@ -16,6 +16,7 @@ function Header({search}) {
                 <Link to="/">
                     <div className={style.logoWrapper}>
                         <img className={style.logoWrapperImg} src={logo} alt="logo" />
+                        <span className={style.logoText}>ReadTown</span>
                     </div>
                 </Link>
                 <form>
