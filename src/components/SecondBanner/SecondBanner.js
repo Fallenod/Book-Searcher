@@ -8,7 +8,7 @@ import style from './SecondBanner.module.css';
 
 function SecondBanner() {
     return ( 
-        <Carousel autoPlay infiniteLoop showThumbs={false}>
+        <Carousel className={style.carousel} autoPlay infiniteLoop showThumbs={false}>
                 <div className={style.carouselBanner}>
                     <img src={carouselBannerImg1} href='#' alt="" />
                 </div>

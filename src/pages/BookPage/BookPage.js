@@ -15,7 +15,7 @@ function BookPage() {
             })
     }, []);
     return ( 
-        <div>
+        <div className={style.bookContainer}>
             {isFetched && bookData.saleInfo.country}
         </div>
      );

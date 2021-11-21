@@ -1,6 +1,7 @@
 .mainItem {
     display: flex;
     justify-content: space-around;
+    max-width: 250px;
     padding: 1rem;
     border-radius: 1rem;
     cursor: pointer;
