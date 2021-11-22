@@ -6,7 +6,7 @@ function Layout(searchValue) {
     
     return ( 
         <>
-            <Header search={searchValue}/>
+            <Header/>
             <Outlet/>
             <Footer/>
         </>

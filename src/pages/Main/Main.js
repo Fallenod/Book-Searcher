@@ -1,10 +1,12 @@
 
 import style from './Main.module.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, usecontext } from "react";
 import BookCard from '../../components/BookCard/BookCard';
 import SecondBanner from '../../components/SecondBanner/SecondBanner';
 import MainBanner from '../../components/MainBanner/MainBanner';
+import Context from '../../context';
+import { useContext } from 'react';
 
 
 function Main() {
@@ -15,6 +17,7 @@ function Main() {
     const [items4, setItems4] = useState({});
     const [items5, setItems5] = useState({});
     const [isFetched,setIsFetched] = useState(false);
+    const cont = useContext(Context)
     let dataObject = [{
                 title: "Harry Potter book series",
                 term: "harry+potter+and+inauthor:j.k.rowling",
@@ -94,7 +97,7 @@ function Main() {
             <MainBanner/>
             <SecondBanner/>
                     <div className={style.bookCompilation}>
-                        <a className={style.bookCompilationTitle} href="#">{dataObject[0].title}</a>
+                        <a className={style.bookCompilationTitle} href="#">{cont}</a>
                         <div className={style.bookCompilationWrapper}>
                             <BookCard items={items.items}/>
                         </div>

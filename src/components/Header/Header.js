@@ -1,14 +1,16 @@
-import {useState } from "react";
+import {useState, useContext } from "react";
 import {Link} from 'react-router-dom';
+import Context from "../../context";
 import style from './Header.module.css';
 import logo from './logo.png';
 
-function Header({search}) {
+function Header() {
     const [searchField, setSearchField] = useState("");
+    const [value, setValue] = useContext(Context)
     const handleChange = e => {
         console.log(e.type)
         e.preventDefault()
-        search(searchField)
+        setValue(searchField)
       };
     return ( 
         <header className={style.header}>

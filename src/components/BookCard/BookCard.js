@@ -23,7 +23,7 @@ function BookCard(items) {
                         </div>
                         <div data-tooltip={volumeInfo.title} className={style.textContainer}>
                             <p className={style.textTitle}>{volumeInfo.title}</p>
-                            <p className={style.textAuthors}>{volumeInfo.authors.join()}</p>
+                            <p className={style.textAuthors}>{volumeInfo.authors}</p>
                         </div>
                         <div className={style.priceContainer}>
                             <span className={(saleInfo.saleability === saleStatus) && (saleInfo.listPrice.amount > saleInfo.retailPrice.amount) ? style.oldPrice : style.actualPrice}>
