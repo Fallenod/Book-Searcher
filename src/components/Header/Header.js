@@ -1,5 +1,5 @@
 import {useState, useContext } from "react";
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import Context from "../../context";
 import style from './Header.module.css';
 import logo from './logo.png';
@@ -7,10 +7,13 @@ import logo from './logo.png';
 function Header() {
     const [searchField, setSearchField] = useState("");
     const [value, setValue] = useContext(Context)
+    let navigate = useNavigate();
     const handleChange = e => {
         console.log(e.type)
         e.preventDefault()
         setValue(searchField)
+        navigate('/search')
+
       };
     return ( 
         <header className={style.header}>
