@@ -17,27 +17,34 @@ function App() {
   const [items, setItems] = useState({});
   const [value, setValue] = useState('');
   const [index, setIndex] = useState(1);
+  const MAX = 20;
   // const inputValue = {value, setValue};
   const fetchData = async () => {
-    const data = await getData(value, index)
+    const data = await getData(value, index, MAX)
     setItems(data)
     setItems(items ? {...items, ...data} : data);
-        setIndex(index + 1)
+        setIndex(index)
   }
   useEffect(() => {
       fetchData()
   }, [value])
-  // const searchValue = (value) => {
-  //   setValue(value)
-  // }
+  useEffect(() => {
+    fetchData()
+}, [index])
+  const getIndex = (index) => {
+    if (index == 1) {
+      setIndex(1)
+    }
+    setIndex((index * MAX) - (MAX - 1))
+  }
   return (
     <Context.Provider value={[value, setValue]}>
       <div className="App">
         <Router>
           <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index path="/" element={<Main/>}/>
-            <Route path="/search" element={<SearchResult items={items.items}/>}/>
+            <Route index path="/Book-Searcher" element={<Main/>}/>
+            <Route path="/search" element={<SearchResult items={items.items} total={items.totalItems} getIndex={getIndex} max={MAX}/>}/>
             <Route path="/book/:id" element={<BookPage/>}/>
             <Route path="/about" element={<AboutPage/>}/>
             <Route path="/contact" element={<ContactPage/>}/>

@@ -1,6 +1,6 @@
 
-export const getData = async (value = "", index = 1) => {
-        const url =`https://www.googleapis.com/books/v1/volumes?q='${value}'&maxResults=40&printType=books&startIndex=${index}`
+export const getData = async (value = "", index = 1, max = 20) => {
+        const url =`https://www.googleapis.com/books/v1/volumes?q='${value}'&maxResults=${max}&printType=books&startIndex=${index}`
         console.log(url)
         const res = await fetch(url);
         const result = await res.json()

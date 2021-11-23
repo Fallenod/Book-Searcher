@@ -10,7 +10,7 @@ function BookCard(items) {
         <Fragment>
         {
             items.items ? items.items.map(({id, volumeInfo, saleInfo }) => (
-                <div className={style.mainItem}>
+                <div key={id} className={style.mainItem}>
                     <Link key={id} to={`/book/${id}`}>
                         <div className={style.imageWrapper}>
                             <img  src={
@@ -39,7 +39,7 @@ function BookCard(items) {
                     </div>
                     </Link>
                 </div>
-            )) : <Loader/>
+            )) : ''
         }
         </Fragment>
      );
