@@ -13,7 +13,7 @@ function BookPage() {
                 setbookData(data);
                 setIsFetched(true);
             })
-    }, []);
+    }, [id]);
     return ( 
         <div className={style.bookContainer}>
             {isFetched && bookData.volumeInfo.title}

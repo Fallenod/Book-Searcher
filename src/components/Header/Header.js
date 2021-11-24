@@ -8,6 +8,7 @@ function Header() {
     const [searchField, setSearchField] = useState("");
     const [value, setValue] = useContext(Context)
     let navigate = useNavigate();
+    
     const handleChange = e => {
         console.log(e.type)
         e.preventDefault()
