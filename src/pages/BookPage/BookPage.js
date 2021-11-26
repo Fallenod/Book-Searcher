@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import {Link} from 'react-router-dom';
 import style from './BookPage.module.css';
+import noImage from './noImage.svg'
 
 function BookPage() {
     const [bookData, setbookData] = useState([]);
@@ -16,7 +18,23 @@ function BookPage() {
     }, [id]);
     return ( 
         <div className={style.bookContainer}>
-            {isFetched && bookData.volumeInfo.title}
+            <div className={style.breadcrumbsWrapper}>
+                <Link to="/">
+                    <span className={style.breadcrumbs}>Home</span>
+                </Link>
+                <span>{'>'}</span>
+                <span className={style.breadcrumbs}>{isFetched && bookData.volumeInfo.categories}</span>
+            </div>
+            <div className={style.mainWrapper}>
+                <div className={style.imgWrapper}>
+                </div>
+                <div className={style.textWrapper}>
+                    <p className={style.title}>{isFetched && bookData.volumeInfo.title}</p>
+                    <div className={style.characteristic}>
+
+                    </div>
+                </div>
+            </div>
         </div>
      );
 }

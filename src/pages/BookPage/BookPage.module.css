@@ -1,0 +1,30 @@
+.bookContainer {
+    width: 80vw;
+    height: 100vh;
+    margin-top: 1rem;
+}
+.breadcrumbWrapper {
+    width: 100%;
+
+}
+.breadcrumbs {
+    margin: 6px;
+    padding: .1rem .7rem;
+    font-size: 1rem;
+    color: rgb(22, 22, 22);
+    border: 3px solid black;
+    border-radius: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+.breadcrumbs:hover {
+    color: #fff;
+    background-color: #490099;
+    border: 3px solid #490099;
+}
+.mainWrapper {
+
+}
+.title {
+
+}
