@@ -20,7 +20,7 @@ function App() {
   const fetchData = async () => {
     const data = await getData(value, index, MAX)
     setItems(data)
-    setItems(items ? {...items, ...data} : data);
+    setItems(items =>  data );
     setIndex(index)
   }
   useEffect(() => {
