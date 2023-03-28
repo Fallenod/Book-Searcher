@@ -1,6 +1,10 @@
 .main {
-    width: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
-.main > img {
-    width: 100px;
+.notFoundPageImg {
+    width: 50%;
+    border-radius: 1.5rem;
+    margin: 1rem;
 }
